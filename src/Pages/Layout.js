@@ -3,7 +3,7 @@ import "../Styles/Layout.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../assests/Img/BRMS_LOGO-removebg-preview 1.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Layout() {
   return (
     <Navbar bg="light" expand="lg">
@@ -26,19 +26,19 @@ function Layout() {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav ">
           <Nav className="ml-auto">
             <Nav.Link>
-              <Link to="/">Home</Link>
+              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>Home</NavLink>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/About">About Us</Link>
+              <NavLink to="/About" className={({ isActive }) => (isActive ? "active" : "inactive")}>About Us</NavLink>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Services">Services</Link>
+              <NavLink to="/Services"     className={({ isActive }) => (isActive ? "active" : "inactive")}>Services</NavLink>
             </Nav.Link>{" "}
             <Nav.Link>
-              <Link to="/Career">Career</Link>
+              <NavLink to="/Career" className={({ isActive }) => (isActive ? "active" : "inactive")}>Career</NavLink>
             </Nav.Link>{" "}
             <Nav.Link>
-              <Link to="/Contact">Contact Us</Link>
+              <NavLink to="/Contact" className={({ isActive }) => (isActive ? "active" : "inactive")}>Contact Us</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

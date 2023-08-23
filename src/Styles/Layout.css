@@ -17,3 +17,6 @@
   color: rgb(3, 2, 70);
   font-weight: 550;
 }
+.active{
+  color: black !important;
+}

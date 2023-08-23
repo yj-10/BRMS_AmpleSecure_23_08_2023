@@ -48,8 +48,8 @@ function Contact() {
           <Row className="contact-row">
             <Col sm="12" md="4" lg="4">
               <div className="Contact_Card ">
-                <img src={G1} className="img-fluid p-3" alt="no-img" />
-                <h3 className="text-center">Get Directions</h3>
+                <img src={G1} className="img-fluid p-3 mb-2" alt="no-img" />
+                <h3 className="text-center mb-1">Get Directions</h3>
                 <p className="text-capitalize">
                   CB-201, Office no -54 , Naraina Ring Road, Near Indian oil
                   Petrol Pump New Delhi-110028
@@ -58,8 +58,8 @@ function Contact() {
             </Col>
             <Col sm="12" md="4" lg="4">
               <div className="Contact_Card">
-                <img src={G2} className="img-fluid p-3" alt="no-img" />
-                <h3 className="text-center">Call Us Now</h3>
+                <img src={G2} className="img-fluid p-3 mb-2" alt="no-img" />
+                <h3 className="text-center mb-1">Call Us Now</h3>
                 <p className="text-capitalize">
                   Telephone :- 04723-787934 <br /> Mobile :- 9876543210
                 </p>
@@ -67,8 +67,8 @@ function Contact() {
             </Col>
             <Col sm="12" md="4" lg="4">
               <div className="Contact_Card">
-                <img src={G3} className="img-fluid p-3" alt="no-img" />
-                <h3 className="text-center">Email Us</h3>
+                <img src={G3} className="img-fluid p-3 mb-2" alt="no-img" />
+                <h3 className="text-center mb-1">Email Us</h3>
                 <p>Abc@gmail.com</p>
               </div>
             </Col>
@@ -86,12 +86,12 @@ function Contact() {
         </div>
 
         <Container
-          className=" w-50 p-5 container-box"
+          className=" w-100 p-5 container-box"
           style={{ backgroundColor: "#dbecf9", borderRadius: "30px" }}
         >
           <div className="div_contact_title mb-5">
             <img src={Hand} className="img-fluid " alt="" />
-            <h2 className="text-capitalize">Contact With Us</h2>
+            <h2 className="text-capitalize ">Contact With Us</h2>
           </div>
 
           <div className="div_contact_form">
