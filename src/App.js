@@ -9,6 +9,8 @@ import Layout from "./Pages/Layout";
 import Risk from "./Pages/Topic/Risk";
 import Employment from "./Pages/Topic/Employment";
 import Private from "./Pages/Topic/Private";
+import Privacy from "./Pages/Common/Privacy";
+import Terms from "./Pages/Common/Terms";
 function App() {
   return (
     <>
@@ -23,6 +25,8 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/Career" element={<Career />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </BrowserRouter>
     </>

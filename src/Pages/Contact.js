@@ -26,18 +26,18 @@ function Contact() {
             Have no more horrible nightmares to onboard defaulters. Contact Us.
           </li>
           <Container>
-          <li className="text-capitalize">
-            Bhupati Risk Mitigation Services Pvt. Ltd. (BRMS) can help you to
-            cut off from fraudsters who oftentimes tend to falsify and degrade
-            your company’s dignity & reputation. You are not alone. We are here
-            to see, screen and dramatically mitigate the risk in profile &
-            background authentication digitally or physically. You are worth to
-            convert only those who are valid.
-          </li>
-          <li className="text-capitalize">
-            Raise your concern via a call or an email. We will come back to you
-            shortly thereafter.
-          </li>
+            <li className="text-capitalize">
+              Bhupati Risk Mitigation Services Pvt. Ltd. (BRMS) can help you to
+              cut off from fraudsters who oftentimes tend to falsify and degrade
+              your company’s dignity & reputation. You are not alone. We are
+              here to see, screen and dramatically mitigate the risk in profile
+              & background authentication digitally or physically. You are worth
+              to convert only those who are valid.
+            </li>
+            <li className="text-capitalize">
+              Raise your concern via a call or an email. We will come back to
+              you shortly thereafter.
+            </li>
           </Container>
         </ul>
       </div>
@@ -61,7 +61,7 @@ function Contact() {
                 <img src={G2} className="img-fluid p-3" alt="no-img" />
                 <h3 className="text-center">Call Us Now</h3>
                 <p className="text-capitalize">
-                  Telephone :- 04723-787934 <br/> Mobile :- 9876543210
+                  Telephone :- 04723-787934 <br /> Mobile :- 9876543210
                 </p>
               </div>
             </Col>
@@ -92,7 +92,6 @@ function Contact() {
           <div className="div_contact_title mb-5">
             <img src={Hand} className="img-fluid " alt="" />
             <h2 className="text-capitalize">Contact With Us</h2>
-            
           </div>
 
           <div className="div_contact_form">
@@ -117,6 +116,7 @@ function Contact() {
                   controlId="exampleForm.ControlInput1"
                 >
                   {/* <Form.Label>Email address</Form.Label> */}
+
                   <Form.Control
                     type="Phone Number"
                     placeholder="Phone Number"

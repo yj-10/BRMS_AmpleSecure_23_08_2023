@@ -30,6 +30,8 @@
   color: white;
   font-weight: 510;
   letter-spacing: 0.4px;
+    /* margin: auto; */
+  /* padding: 10px; */
 }
 .Footer .Footer_box .Footer_content .div_footer_title img {
   border: 1px solid white !important;

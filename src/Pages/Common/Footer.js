@@ -97,8 +97,8 @@ function Footer() {
           <p>© AmpleSecure {new Date().getFullYear()} – All Rights Reserved</p>
         </div>
         <div className="div_footer_privacy_term">
-          <Link to="">Privacy Policy</Link>
-          <Link to="">Terms and Conditions</Link>
+          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/terms">Terms and Conditions</Link>
         </div>
       </div>
     </>
