@@ -27,9 +27,9 @@ function Services() {
         <div className="Services_headers">
           <h1 className="text-capitalize">Our Services</h1>
           <p className="text-capitalize">
-          Bhupati Risk Mitigation Services Pvt. Ltd. provides investigation services in various domains
-            ranging from risk investigations for insurance industries to
-            personal investigation for individuals.
+            Bhupati Risk Mitigation Services Pvt. Ltd. provides investigation
+            services in various domains ranging from risk investigations for
+            insurance industries to personal investigation for individuals.
           </p>
         </div>
       </div>
@@ -115,8 +115,9 @@ task of helping the board members.
                     Risk Investigation For Insurance Industry
                   </h5>
                   <p className="card-text text-capitalize">
-                    Profile verification is a critical service that Bhupati Risk Mitigation Services Pvt. Ltd. (BRMS)
-                    provides to its insurance industry clients.
+                    Profile verification is a critical service that Bhupati Risk
+                    Mitigation Services Pvt. Ltd. (BRMS) provides to its
+                    insurance industry clients.
                   </p>
                   <Link to={"/Risk"} className="btn btn-success">
                     Read More
@@ -288,7 +289,10 @@ used in legal proceedings, personal matters, or to protect a business&#39;s inte
             </Col>
             <Col md={6} sm={12} lg={6}>
               <div className="div_connect_button">
-                <button className="button">GET IN TOUCH</button>
+                <Link to="/Contact">
+        
+                  <button className="button">GET IN TOUCH</button>
+                </Link>
               </div>
             </Col>
           </Row>
