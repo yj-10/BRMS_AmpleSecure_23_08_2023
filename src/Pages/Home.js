@@ -22,7 +22,7 @@ import postImg from "../assests/Img/Rectangle 16.png";
 import teamImg1 from "../assests/Img/Rectangle 24.png";
 import teamImg2 from "../assests/Img/Rectangle 25.png";
 import teamImg3 from "../assests/Img/Rectangle 26.png";
-import V1 from "../assests/Img/v1.png";
+import V1 from "../assests/Img/V1.png";
 import V2 from "../assests/Img/v2.png";
 import V3 from "../assests/Img/v3.png";
 import B1 from "../assests/Img/A-1 Aditya Birla Sun Life Insurance.png";
@@ -43,9 +43,9 @@ import B14 from "../assests/Img/A-14 TATA AIA Life Insurance.png";
 import R3 from "../assests/Img/R3.png";
 
 function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   var settings = {
     // dots: true,
     infinite: false,
@@ -113,7 +113,7 @@ function Home() {
           <ul className="ellipse_ul">
             <li>
               <div className="ellipse_box">
-                <img src={V1} />
+                <img src={V1} className="img-fluid " style={{width:"35px" ,height:"40px"}} alt="no-img"/>
                 <h1>Transparency</h1>
                 {/* <p>
                 Our work deals with minute details of investigation and sharing.
@@ -122,7 +122,7 @@ function Home() {
             </li>
             <li>
               <div className="ellipse_box">
-                <img src={V2} />
+                <img src={V2} className="img-fluid " style={{width:"35px" ,height:"40px"}}alt="no-img"/>
                 <h1>Integrity</h1>
                 {/* <p>
                   Solve on-risk/underwriting identified cases with concrete
@@ -132,7 +132,7 @@ function Home() {
             </li>
             <li>
               <div className="ellipse_box">
-                <img src={V3} />
+                <img src={V3} className="img-fluid " style={{width:"35px" ,height:"40px"}} alt="no-img" />
                 <h1>Quality</h1>
                 {/* <p>
                   Swiftly tap, identify and administer what is needful for

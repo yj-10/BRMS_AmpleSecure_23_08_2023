@@ -17,9 +17,9 @@ import imghelp from "../assests/Img/360_F_413785526_lRvWq8odEvaNYzPHedW1P98DbLsx
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 function Services() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <>
       <div className="div_Services_container">
@@ -290,9 +290,10 @@ used in legal proceedings, personal matters, or to protect a business&#39;s inte
             <Col md={6} sm={12} lg={6}>
               <div className="div_connect_button">
                 <Link to="/Contact">
-        
-                  <button className="button">GET IN TOUCH</button>
-                </Link>
+                  {/* <Link to="#cont"> */}
+                    <button className="button">GET IN TOUCH</button>
+                  </Link>
+                {/* </Link> */}
               </div>
             </Col>
           </Row>

@@ -13,6 +13,9 @@ import {
 import "./Footer.css";
 import { useEffect } from "react";
 function Footer() {
+  function upClick(){
+    return window.scrollTo(0, 0);
+  }
   return (
     <>
       <div className="Footer-Container">
@@ -43,24 +46,25 @@ function Footer() {
 
                 <div className="ul">
                   <div className="li">
-                    <Link to="/">Home</Link>
+                    <Link to="/" onClick={upClick}>Home</Link>
                   </div>
                   <div className="li">
-                    <Link to="/About">About</Link>
+                    <Link to="/About" onClick={upClick}>About</Link>
                   </div>
                   <div className="li">
-                    <Link to="/Career">Career</Link>
+                    <Link to="/Career" onClick={upClick}>Career</Link>
                   </div>
                   <div className="li">
-                    <Link to="/Services">Services</Link>
+                    <Link to="/Services" onClick={upClick}>Services</Link>
                   </div>
+             
                 </div>
               </div>
             </Col>
             <Col sm={12} lg={3} md={6}>
               <div className="Footer_content">
                 <div className="div_footer_title mb-3">
-                  <h1>Contact</h1>
+                  <h1 >Contact</h1>
                 </div>
 
                 <div className="ul">

@@ -9,9 +9,9 @@ import Hand from "../assests/Img/Handshake 1.png";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useEffect } from "react";
 function Contact() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <>
       <div className="div_Contact_container">
@@ -94,7 +94,7 @@ function Contact() {
             <h2 className="text-capitalize ">Contact With Us</h2>
           </div>
 
-          <div className="div_contact_form">
+          <div className="div_contact_form" id="cont">
             <Form>
               <Form>
                 <Form.Group
