@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+
 import bgImg from "../assests/Img/Background.png";
 import "../Styles/Home.css";
 import { Card, Col, Container, InputGroup, Row } from "react-bootstrap";
@@ -41,11 +41,27 @@ import B13 from "../assests/Img/A-13 Star Union Life Insurance.png";
 import B14 from "../assests/Img/A-14 TATA AIA Life Insurance.png";
 
 import R3 from "../assests/Img/R3.png";
+import React, { useState, useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "./scroll.css";
 
 function Home() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
+  }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   var settings = {
     // dots: true,
     infinite: false,
@@ -803,6 +819,15 @@ peace of mind.
       {/* </div> */}
       {/*  */}
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

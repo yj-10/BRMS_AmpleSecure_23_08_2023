@@ -1,14 +1,28 @@
 import { MDBContainer } from "mdb-react-ui-kit";
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "../scroll.css";
 import Footer from "./Footer";
 import "../../Styles/Privacy.css";
 
 
 function Privacy() {
-  useEffect(()=>{
-    window.scrollTo(0, 0)
-
-  },[])
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
+  }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <MDBContainer className="my-5">
@@ -132,6 +146,15 @@ function Privacy() {
         </div>
       </MDBContainer>
       <Footer/>
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
 
     </>
   );

@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+
+import { FaAngleUp } from "react-icons/fa";
+import "../scroll.css";
 import "../../Styles/Risk.css";
 import { Col, Container, Row } from "react-bootstrap";
 import R1 from "../../assests/Img/Profile Verificatio1.png";
@@ -13,12 +16,25 @@ import R9 from "../../assests/Img/RTO (return to origin) check.png";
 import R10 from "../../assests/Img/Claim investigation.avif";
 import R11 from "../../assests/Img/Document pickup.avif";
 import Footer from "../Common/Footer";
-import { useEffect } from "react";
+
 
 function Risk() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
   }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <Container>
@@ -372,6 +388,15 @@ function Risk() {
       </div>
       {/*  */}
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

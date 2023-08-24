@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "./scroll.css";
 import bgImg from "../assests/Img/Services.png";
 import "../Styles/Services.css";
 import Footer from "./Common/Footer";
@@ -16,10 +18,24 @@ import imghelp from "../assests/Img/360_F_413785526_lRvWq8odEvaNYzPHedW1P98DbLsx
 
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 function Services() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
+  }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <div className="div_Services_container">
@@ -302,6 +318,15 @@ used in legal proceedings, personal matters, or to protect a business&#39;s inte
       {/*  */}
 
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "../scroll.css";
 import { Col, Container, Row } from "react-bootstrap";
 import "../../Styles/Employment.css";
 
@@ -9,7 +11,7 @@ import E4 from "../../assests/Img/Reference check.png";
 import E5 from "../../assests/Img/Past Employment Check1.png";
 import E6 from "../../assests/Img/Criminal record verification.png";
 import Footer from "../Common/Footer";
-import { useEffect } from "react";
+
 // import R7 from "../../assests/Img/history.png";
 // import R8 from "../../assests/Img/Shadowing.jpg";
 // import R9 from "../../assests/Img/RTO (return to origin) check.png";
@@ -17,9 +19,22 @@ import { useEffect } from "react";
 // import R11 from "../../assests/Img/Document pickup.avif";
 
 function Employment() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
   }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <Container>
@@ -235,6 +250,15 @@ function Employment() {
       </div>
 
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

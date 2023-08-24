@@ -1,4 +1,3 @@
-import React from "react";
 import bgImg from "../assests/Img/Career.png";
 import CareerJoin from "../assests/Img/CareerImg.png";
 import imgone from "../assests/Img/Rectangle 71.png";
@@ -8,11 +7,26 @@ import imgfour from "../assests/Img/Rectangle 74.png";
 import "../Styles/Career.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "./Common/Footer";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "./scroll.css";
 function Career() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
   }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <div className="div_Career_container">
@@ -355,6 +369,15 @@ function Career() {
       {/*  */}
 
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

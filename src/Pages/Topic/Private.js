@@ -1,14 +1,30 @@
-import React from "react";
+
 import { Col, Container, Row } from "react-bootstrap";
 import "../../Styles/Private.css";
 import P1 from "../../assests/Img/private investigation1.png";
 import Footer from "../Common/Footer";
-import { useEffect } from "react";
+import React, { useState,useEffect } from "react";
+
+import { FaAngleUp } from "react-icons/fa";
+import "../scroll.css";
 
 function Private() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
   }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <Container>
@@ -56,6 +72,15 @@ function Private() {
       </div>
 
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

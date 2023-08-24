@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import bgImg from "../assests/Img/About.png";
 import "../Styles/About.css";
+import { FaAngleUp } from "react-icons/fa";
+import "./scroll.css";
 import { Col, Container, Row } from "react-bootstrap";
 import vecimg from "../assests/Img/our_history 1.png";
 import vecimg1 from "../assests/Img/history.png";
@@ -9,11 +11,27 @@ import about2 from "../assests/Img/Abouttwo.png";
 import about3 from "../assests/Img/AboutThree.png";
 import techImg from "../assests/Img/largest_technology-company 1.png";
 import Footer from "./Common/Footer";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 function About() {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
-    window.scrollTo(0, 0);
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
   }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <div className="div_About_container">
@@ -189,8 +207,21 @@ function About() {
       </div> */}
       {/*  */}
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }
 
 export default About;
+
+
+
+

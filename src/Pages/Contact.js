@@ -1,4 +1,3 @@
-import React from "react";
 import bgImg from "../assests/Img/Contact.png";
 import "../Styles/Contact.css";
 import Footer from "./Common/Footer";
@@ -7,11 +6,26 @@ import G2 from "../assests/Img/Vector (1).png";
 import G3 from "../assests/Img/Vector (2).png";
 import Hand from "../assests/Img/Handshake 1.png";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "./scroll.css";
 function Contact() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
+  }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
   return (
     <>
       <div className="div_Contact_container">
@@ -89,12 +103,12 @@ function Contact() {
           className=" w-100 p-5 container-box"
           style={{ backgroundColor: "#dbecf9", borderRadius: "30px" }}
         >
-          <div className="div_contact_title mb-5">
-            <img src={Hand} className="img-fluid " alt="" />
-            <h2 className="text-capitalize ">Contact With Us</h2>
+          <div className="Contact-Title mb-5">
+            {/* <img src={Hand} alt="no-img" className="img-fluid w-25 "/> */}
+            <h2 className="text-capitalize text-center ">Contact With Us</h2>
           </div>
 
-          <div className="div_contact_form" id="cont">
+          <div className="Contact-Form" id="cont">
             <Form>
               <Form>
                 <Form.Group
@@ -179,6 +193,15 @@ function Contact() {
       <br />
 
       <Footer />
+      <div className="top-to-btm">
+            {" "}
+            {showTopBtn && (
+                <FaAngleUp
+                    className="icon-position icon-style"
+                    onClick={goToTop}
+                />
+            )}{" "}
+        </div>
     </>
   );
 }

@@ -37,6 +37,7 @@
   font-weight: 600;
 }
 
+
 /* // Contact middle Container */
 
 .Contact_middle_Container .Contact_Card {
@@ -114,9 +115,10 @@ text-align:start;
 .container-box .div_contact_title img {
    width: 200px;
 }
-.container-box .div_contact_title h2 {
+.container-box .Contact-Title h2 {
 
-  /* text-align: center; */
+  text-align: center !important;
+  
   /* color: rgba(4, 86, 152, 1); */
   /* color: rgb(4, 141, 11); */
   /* background-color: red; */
@@ -129,7 +131,17 @@ text-align:start;
   color: rgb(4, 141, 11);
   /* font-weight: 600; */
 }
+.Contact-Title {
+  background-image: url('../assests/Img/Handshake\ 1.png');
+position: relative;
+background-origin: initial;
+background-repeat: no-repeat;
+height: 100px;
+background-size: 120px 90px;
 
+/* background-position: center; */
+/* background-origin: 50% 10px; */
+}
 .div_contact_title {
   display: flex;
   justify-content: start;
