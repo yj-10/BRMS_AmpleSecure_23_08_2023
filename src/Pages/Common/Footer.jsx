@@ -213,8 +213,8 @@ function Footer() {
           </div>
           <div className="Copyright-Col">
             <div className="Col-Sec">
-              <Link to="/privacy">Privacy Policy</Link>
-              <Link to="/terms">Terms and Conditions</Link>
+              <Link to="/privacy" onClick={upClick}>Privacy Policy</Link>
+              <Link to="/terms" onClick={upClick}>Terms and Conditions</Link>
             </div>
           </div>
         </div>
